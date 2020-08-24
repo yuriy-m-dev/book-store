@@ -1,7 +1,7 @@
 const SET_ACTIVE_CATEGORY = 'SET_ACTIVE_CATEGORY'
 
 const initialState = {
-  categories: ['Cooking', 'Education', 'Fiction', 'Computers', 'Mathematics', 'Medical', 'Reference', 'Science'] as Array<string>,
+  categories: ['Cooking', 'Education', 'Fiction', 'Computers', 'Mathematics'] as Array<string>,
   activeCategory: 0
 }
 
