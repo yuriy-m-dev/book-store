@@ -239,14 +239,6 @@
       "price": 19.95,
       "category": 4,
       "rating": 2
-    },
-    {
-      "id": 30,
-      "imageUrl": "https://secure.coverart.bookstores.com/large/599/1-9780070381599.jpg",
-      "name": "Schaum's Outline of Set Theory and Related Topics",
-      "price": 23.00,
-      "category": 4,
-      "rating": 15
     }
   ]
 }
