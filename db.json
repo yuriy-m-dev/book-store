@@ -1,0 +1,252 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/206/1-9780061092206.jpg",
+      "name": "Bartender's Bible 1001 Mixed Drinks and Everything You Need to Know to Set up Your Bar",
+      "price": 7.99,
+      "category": 0,
+      "rating": 0
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/832/1-9780060175832.jpg",
+      "name": "Chez Panisse Cafe Cookbook",
+      "price": 37.50,
+      "category": 0,
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/515/1-9780060883515.jpg",
+      "name": "Story of Sushi An Unlikely Saga of Raw Fish and Rice",
+      "price": 14.99,
+      "category": 0,
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/965/1-9780071473965.jpg",
+      "name": "What to Eat If You Have Cancer (revised) Healing Foods That Boost Your Immune System",
+      "price": 20.00,
+      "category": 0,
+      "rating": 9
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/825/1-9780061673825.jpg",
+      "name": "Not for Bread Alone Writers on Food, Wine, and the Art of Eating",
+      "price": 13.99,
+      "category": 0,
+      "rating": 6
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/897/1-9780060934897.jpg",
+      "name": "Simple Art of Napkin Folding 94 Fancy Folds for Every Tabletop Occasion",
+      "price": 12.99,
+      "category": 0,
+      "rating": 1
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/079/1-9780194422079.jpg",
+      "name": "TEACHING YOUNG LANGUAGE LEARNERS",
+      "price": 38.00,
+      "category": 1,
+      "rating": 7
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/417/1-9780071479417.jpg",
+      "name": "Ultimate Guide to Choosing a Medical Specialty",
+      "price": 32.95,
+      "category": 1,
+      "rating": 3
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/780/1-9780194425780.jpg",
+      "name": "Teaching Other Subjects Through English",
+      "price": 22.50,
+      "category": 1,
+      "rating": 6
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/969/1-9780007298969.jpg",
+      "name": "Element Encyclopedia of Secret Signs and Symbols The Ultimate A-Z Guide from Alchemy to the Zodiac",
+      "price": 16.99,
+      "category": 1,
+      "rating": 12
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/162/1-9780061554162.jpg",
+      "name": "My Weird School Daze #9: Mrs. Lizzy Is Dizzy!",
+      "price": 4.99,
+      "category": 1,
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/215/1-9780192893215.jpg",
+      "name": "Intelligence",
+      "price": 11.95,
+      "category": 1,
+      "rating": 0
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/182/1-9780006470182.jpg",
+      "name": "Mr. American",
+      "price": 16.00,
+      "category": 2,
+      "rating": 8
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/128/1-9780006135128.jpg",
+      "name": "HMS Ulysses:",
+      "price": 9.99,
+      "category": 2,
+      "rating": 7
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/228/1-9780007102228.jpg",
+      "name": "Grand Conspiracy: Second Book of the Alliance of Light (the Wars of Light and Shadow, Book 5)",
+      "price": 8.99,
+      "category": 2,
+      "rating": 0
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/599/1-9780006162599.jpg",
+      "name": "Golden Rendezvous",
+      "price": 9.99,
+      "category": 2,
+      "rating": 1
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/042/1-9780006158042.jpg",
+      "name": "Where Eagles Dare",
+      "price": 9.99,
+      "category": 2,
+      "rating": 12
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/226/1-9780006161226.jpg",
+      "name": "Night Without End",
+      "price": 9.99,
+      "category": 2,
+      "rating": 5
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/673/1-9780071154673.jpg",
+      "name": "Machine Learning (Mcgraw-Hill International Edit)",
+      "price": 87.32,
+      "category": 3,
+      "rating": 3
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/805/1-9780072226805.jpg",
+      "name": "C++: the Complete Reference, 4th Edition",
+      "price": 59.00,
+      "category": 3,
+      "rating": 7
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/078/1-9780071362078.jpg",
+      "name": "Schaum's Outline of Computer Architecture",
+      "price": 25.00,
+      "category": 3,
+      "rating": 4
+    },
+    {
+      "id": 21,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/707/1-9780071466707.jpg",
+      "name": "Instant Systems",
+      "price": 22.00,
+      "category": 3,
+      "rating": 13
+    },
+    {
+      "id": 22,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/872/1-9780060762872.jpg",
+      "name": "How to Buy, Sell, and Profit on EBay Kick-Start Your Home-Based Business in Just Thirty Days",
+      "price": 14.99,
+      "category": 3,
+      "rating": 3
+    },
+    {
+      "id": 23,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/478/1-9780071492478.jpg",
+      "name": "Linux: the Complete Reference, Sixth Edition",
+      "price": 57.00,
+      "category": 3,
+      "rating": 0
+    },
+    {
+      "id": 24,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/615/1-9780071226615.jpg",
+      "name": "Probability, Random Variables and Stochastic Processes with Errata Sheet",
+      "price": 105.18,
+      "category": 4,
+      "rating": 1
+    },
+    {
+      "id": 25,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/029/1-9780062731029.jpg",
+      "name": "Cartoon Guide to Statistics",
+      "price": 19.99,
+      "category": 4,
+      "rating": 3
+    },
+    {
+      "id": 26,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/927/1-9780071387927.jpg",
+      "name": "How to Measure Training Results A Practical Guide to Tracking the Six Key Indicators",
+      "price": 45,
+      "category": 4,
+      "rating": 9
+    },
+    {
+      "id": 27,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/240/1-9780070041240.jpg",
+      "name": "Schaum's Outline of Group Theory",
+      "price": 24.00,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": 28,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/855/1-9780070379855.jpg",
+      "name": "Schaum's Outline of Differential Geometry",
+      "price": 25.00,
+      "category": 4,
+      "rating": 6
+    },
+    {
+      "id": 29,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/938/1-9780071389938.jpg",
+      "name": "Algebra Demystified",
+      "price": 19.95,
+      "category": 4,
+      "rating": 2
+    },
+    {
+      "id": 30,
+      "imageUrl": "https://secure.coverart.bookstores.com/large/599/1-9780070381599.jpg",
+      "name": "Schaum's Outline of Set Theory and Related Topics",
+      "price": 23.00,
+      "category": 4,
+      "rating": 15
+    }
+  ]
+}
