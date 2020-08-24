@@ -1,0 +1,413 @@
+@import "normalize";
+@import "fonts";
+@import "global";
+
+// Start header
+.header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #cecece;
+  &__inner {
+    min-height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info-block {
+    font-family: "SegoeWP";
+    color: #6d6d6d;
+    font-size: 26px;
+  }
+  &__cart {
+    margin-bottom: 8px;
+    padding-left: 35px;
+    &-text {
+      position: relative;
+      display: inline-block;
+      margin-right: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -35px;
+        width: 27px;
+        height: 29px;
+        background-image: url(../assets/images/cart.svg);
+      }
+    }
+    &-count {
+      font-size: 14px;
+    }
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-family: "SegoeWPBold";
+    }
+    &-btn {
+      background-color: #2b2b2b;
+      padding: 3px 12px 6px 12px;
+      border-radius: 6px;
+      margin-left: 14px;
+      cursor: pointer;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+// End header
+
+// Start products
+.nav {
+  border: 1px solid #dedede;
+  margin-right: 7px;
+  max-width: 188px;
+  width: 100%;
+  &__title {
+    font-family: "SegoeWPLight";
+    font-size: 24px;
+    color: #6b6969;
+    padding: 10px 18px 10px;
+    margin-bottom: 8px;
+  }
+  &__item {
+    display: block;
+    font-family: "SegoeWP";
+    color: #555454;
+    padding: 6px 24px 6px;
+    font-size: 15px;
+    cursor: pointer;
+    &.active {
+      color: #fff;
+      background-color: #87c76b;
+      &:hover {
+        background-color: #87c76b;
+      }
+    }
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+}
+.products__inner {
+  padding: 8px;
+  display: flex;
+}
+.products__container {
+  border: 1px solid #dedede;
+  width: 100%;
+}
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -20px;
+  padding: 23px;
+}
+.products__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  flex-basis: calc(20% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.products__image {
+  padding: 5px;
+  text-align: center;
+  img {
+    width: 150px;
+    height: 240px;
+    object-fit: cover;
+  }
+}
+.products__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-family: "SegoeWPSemiLight";
+  color: #646464;
+  font-size: 14px;
+  margin-bottom: 3px;
+  text-align: center;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+.products__price {
+  font-family: "HelveticaLTStd-Roman";
+  text-align: center;
+  font-size: 18px;
+  color: #f05356;
+  margin-bottom: 10px;
+}
+.products__btn {
+  text-align: center;
+  background-color: #87c76b;
+  color: #fff;
+  padding: 7px 10px 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  &:active {
+    transform: translateY(1px);
+  }
+}
+.sorting {
+  padding-left: 27px;
+  &__inner {
+    position: relative;
+    display: inline-block;
+  }
+  &__label {
+    p {
+      font-family: "SegoeWPBold";
+      display: inline-block;
+      font-size: 17px;
+      color: #696969;
+      margin-right: 10px;
+    }
+    span {
+      display: inline-block;
+      min-width: 160px;
+      font-family: "SegoeWPSemiLight";
+      color: #555454;
+      padding: 6px 10px 5px 10px;
+      position: relative;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 42%;
+        right: 11px;
+        width: 10px;
+        height: 7px;
+        background: url(../assets/images/arrow.svg) no-repeat center / cover;
+      }
+      &.rotate::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__popup {
+    position: absolute;
+    right: 0;
+    top: 43px;
+    font-family: "SegoeWPSemiLight";
+    color: #555454;
+    min-width: 160px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    li {
+      display: block;
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}
+// End products
+
+// Start cart
+.cart {
+  color: #5b5b5b;
+  margin: 20px 0;
+  &__empty {
+    font-family: "SegoeWPBold";
+    border: 1px solid #d8dce0;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 10px;
+  }
+  &__label {
+    font-family: "SegoeWPBold";
+    font-size: 19px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__clear-btn {
+    cursor: pointer;
+    color: #7e7e7e;
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 20px;
+      height: 22px;
+      background: url(../assets/images/trash.svg) center / cover;
+    }
+  }
+  &__inner {
+    border: 1px solid #d8dce0;
+    padding: 20px 23px 10px;
+    margin-bottom: 5px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #d8dce0;
+    &-image {
+      margin-right: 10px;
+      img {
+        width: 130px;
+        height: 200px;
+      }
+    }
+    &-desc {
+      display: flex;
+    }
+    &-title {
+      padding-top: 10px;
+      font-family: "SegoeWPBold";
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding-right: 20px;
+    }
+    &-price {
+      color: #f05356;
+      font-family: "HelveticaLTStd-Roman";
+      font-size: 18px;
+    }
+    &-checkout {
+      min-width: 143px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    &-quantity {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      &-label {
+        font-family: "HelveticaLTStd-Roman";
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+    &-count {
+      &-minus,
+      &-plus {
+        background-color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border: 1px solid #d8dce0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        transition: 0.2s;
+        &:hover {
+          background-color: #f2f2f2;
+        }
+        &:active {
+          transform: translateY(1px);
+        }
+      }
+      span {
+        padding: 0 7px;
+      }
+    }
+    &-total {
+      text-align: right;
+      font-family: "HelveticaLTStd-Roman";
+      color: #f05356;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &-remove-btn {
+      font-size: 14px;
+      border: 1px solid #d8dce0;
+      border-radius: 10px;
+      height: 35px;
+      width: 100px;
+      cursor: pointer;
+      outline: none;
+      color: #696969;
+      background-color: #fff;
+      transition: 0.2s;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+  &__totals {
+    border: 1px solid #d8dce0;
+    display: flex;
+    justify-content: space-between;
+    padding: 23px;
+    &-inner {
+      font-size: 16px;
+    }
+    &-price {
+      font-family: "SegoeWPBold";
+      color: #f05356;
+      margin-bottom: 15px;
+    }
+    &-pay-btn {
+      font-size: 15px;
+      border: 1px solid #d8dce0;
+      border-radius: 10px;
+      height: 35px;
+      width: 100px;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #87c76b;
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+    &-come-back-btn {
+      display: block;
+      font-size: 14px;
+      border: 1px solid #d8dce0;
+      border-radius: 10px;
+      height: 35px;
+      width: 100px;
+      cursor: pointer;
+      outline: none;
+      background-color: #fff;
+      transition: 0.2s;
+      a {
+        color: #696969;
+      }
+      &:hover {
+        background-color: #f2f2f2;
+      }
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+  &__message {
+    font-size: 14px;
+    &-price {
+      font-family: "SegoeWPBold";
+    }
+    span {
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+@import "media";
