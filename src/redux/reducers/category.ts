@@ -2,7 +2,7 @@ const SET_ACTIVE_CATEGORY = 'SET_ACTIVE_CATEGORY'
 
 const initialState = {
   categories: ['Cooking', 'Education', 'Fiction', 'Computers', 'Mathematics'] as Array<string>,
-  activeCategory: 0
+  activeCategory: null as number | null
 }
 
 type InitialStateType = typeof initialState
@@ -19,10 +19,10 @@ const category = (state = initialState, action: ActionsType): InitialStateType =
   }
 }
 
-export const setActiveCategory = (index: number): SetActiveCategoryType => ({type: SET_ACTIVE_CATEGORY, payload: index})
+export const setActiveCategory = (index: number | null): SetActiveCategoryType => ({type: SET_ACTIVE_CATEGORY, payload: index})
 type SetActiveCategoryType = {
   type: typeof SET_ACTIVE_CATEGORY
-  payload: number
+  payload: number | null
 }
 type ActionsType = SetActiveCategoryType
 

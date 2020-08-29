@@ -1,30 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react'
 import cn from 'classnames'
+import { useSelector, useDispatch } from 'react-redux'
+import { AppStateType } from '../redux/store'
+import { setSortBy } from '../redux/reducers/sort'
 
-type PropsType = {
-  sortData: Array<SortDataType>,
-  onSortItemClick: (type: string, order: string) => void
-}
-type SortDataType = {
-  id: number
-  name: string
-  type: string
-  order: string
-}
+const SortPopup = () => {
 
-const SortPopup = ({ sortData, onSortItemClick }: PropsType) => {
-
+  const sortData = useSelector((state: AppStateType) => state.sort.sortData)
   const [visiblePopup, setVisiblePopup] = useState(false)
   const [activeItem, setActiveItem] = useState(sortData[0].name)
   const sortRef = useRef<HTMLDivElement | null>(null)
+  const dispatch = useDispatch()
 
   const onPopupClick = () => {
     setVisiblePopup(!visiblePopup)
   }
-  const onItemClick = (id: number, type: string, order: string) => {
+  const onSortItemClick = (id: number, type: string, order: string) => {
     setActiveItem(sortData[id].name)
     setVisiblePopup(false)
-    onSortItemClick(type, order)
+    dispatch(setSortBy(type, order))
   }
   const handleOutsideClick = (event: any) => {
     const path = event.path || (event?.composedPath && event.composedPath())
@@ -50,7 +44,7 @@ const SortPopup = ({ sortData, onSortItemClick }: PropsType) => {
           visiblePopup && <div className="sorting__popup">
             <ul>
               {
-                sortData.map(obj => <li onClick={() => onItemClick(obj.id, obj.type, obj.order)} key={obj.id}>{obj.name}</li>)
+                sortData.map(obj => <li onClick={() => onSortItemClick(obj.id, obj.type, obj.order)} key={obj.id}>{obj.name}</li>)
               }
             </ul>
           </div>

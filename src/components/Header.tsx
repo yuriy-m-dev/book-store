@@ -1,17 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter, useLocation } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 import { useSelector } from 'react-redux'
 import { AppStateType } from '../redux/store'
+import SearchForm from './searchForm'
 
 const Header = () => {
-
   const { totalCount, totalPrice } = useSelector((state: AppStateType) => {
     return {
       totalCount: state.cart.totalCount,
       totalPrice: state.cart.totalPrice
     }
   })
+  const location = useLocation()
 
   return (
     <header className='header'>
@@ -20,6 +21,9 @@ const Header = () => {
           <div className="logo">
             <Link to='/'><img src={logo} alt="logo" /></Link>
           </div>
+          {
+            location.pathname === '/cart' ? null : <SearchForm />
+          }
           <div className="header__info-block">
             <div className="header__cart">
               <span className="header__cart-text">Your cart</span>

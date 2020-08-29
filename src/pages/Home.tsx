@@ -3,47 +3,38 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Categories, BookItem, SortPopup } from '../components'
 import { getBooks, BookType } from '../redux/reducers/books'
 import { AppStateType } from '../redux/store'
-import { setActiveCategory } from '../redux/reducers/category'
-import { setSortBy } from '../redux/reducers/sort'
 import { addBookToCart } from '../redux/reducers/cart'
 
 const Home = () => {
 
   const dispatch = useDispatch()
-  const { books, categories, activeCategory, sortData, sortType, sortOrder, cartItems } = useSelector((state: AppStateType) => {
+  const { books, categories, activeCategory, sortType, sortOrder, cartItems, searchQuery } = useSelector((state: AppStateType) => {
     return {
       books: state.books.books,
       categories: state.category.categories,
       activeCategory: state.category.activeCategory,
-      sortData: state.sort.sortData,
       sortType: state.sort.sortBy.sortType,
       sortOrder: state.sort.sortBy.sortOrder,
-      cartItems: state.cart.items
+      cartItems: state.cart.items,
+      searchQuery: state.books.searchQuery
     }
   })
 
-  const onCategoryItemClick = (index: number) => {
-    dispatch(setActiveCategory(index))
-  }
-  const onSortItemClick = (type: string, order: string) => {
-    dispatch(setSortBy(type, order))
-  }
   const onAddBookToCartClick = (obj: BookType) => {
     dispatch(addBookToCart(obj))
   }
 
   useEffect(() => {
-    dispatch(getBooks(activeCategory, sortType, sortOrder))
-  }, [activeCategory, sortType, sortOrder])
+    dispatch(getBooks(activeCategory, sortType, sortOrder, searchQuery))
+  }, [activeCategory, sortType, sortOrder, searchQuery])
 
   return (
     <section className="products">
       <div className="container">
         <div className="products__inner">
-          <Categories categoryNames={categories} activeCategory={activeCategory}
-            onCategoryItemClick={onCategoryItemClick} />
+          <Categories categoryNames={categories} activeCategory={activeCategory}/>
           <div className="products__container">
-            <SortPopup sortData={sortData} onSortItemClick={onSortItemClick} />
+            <SortPopup />
             <div className="products__list">
               {
                 books && books.map((obj: BookType) => <BookItem

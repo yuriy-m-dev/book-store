@@ -7,7 +7,7 @@ const QTY_UP = 'QTY_UP'
 const QTY_DOWN = 'QTY_DOWN'
 
 const initialState = {
-  items: {} as any,
+  items: {} as any | Object,
   totalCount: 0,
   totalPrice: 0
 }
@@ -17,15 +17,16 @@ type InitialStateType = typeof initialState
 const getTotalPrice = (arr: Array<BookType>): number => {
   return +arr.reduce((sum: number, obj: BookType) => sum + obj.price, 0).toFixed(2)
 }
-const _get = (obj: any, path: any) => {
+
+const _get = (obj: any, path: string): number => {
   const [firtsKey, ...keys] = path.split('.')
-  return keys.reduce((val: any, key: any) => {
+  return keys.reduce((val: any, key: string) => {
     return val[key]
   }, obj[firtsKey])
 }
 
-const getTotalSum = (obj: Object, path: string): any => {
-  return Object.values(obj).reduce((sum: number, obj: Object): number => {
+const getTotalSum = (obj: Object, path: string): number => {
+  return Object.values(obj).reduce((sum, obj): number => {
     const value = _get(obj, path)
     return sum + value
   }, 0)
