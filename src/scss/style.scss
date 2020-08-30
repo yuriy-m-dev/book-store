@@ -15,6 +15,8 @@
   &__search-form {
     max-width: 455px;
     width: 100%;
+    margin-right: auto;
+    margin-left: 180px;
   }
   &__search-inner {
     position: relative;
@@ -50,7 +52,7 @@
         top: 4px;
         width: 24px;
         height: 24px;
-        background: url(../assets/images/search.svg) center;
+        background: url(../assets/images/search.svg) center /cover;
       }
     }
   }
@@ -58,6 +60,8 @@
     font-family: "SegoeWP";
     color: #6d6d6d;
     font-size: 26px;
+    flex-shrink: 0;
+    margin-left: 20px;
   }
   &__cart {
     margin-bottom: 8px;

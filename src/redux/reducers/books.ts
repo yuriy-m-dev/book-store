@@ -5,6 +5,7 @@ import { Action } from 'redux'
 
 const SET_BOOKS = 'SET_BOOKS'
 const SET_SEARCH_QUERY = 'SET_SEARCH_QUERY'
+const CLEAR_SEARCH_QUERY = 'CLEAR_SEARCH_QUERY'
 
 const initialState = {
   books: null as Array<BookType> | null,
@@ -24,13 +25,19 @@ const books = (state = initialState, action: ActionTypes): InitialStateType => {
         ...state,
         searchQuery: action.payload
       }
+    case CLEAR_SEARCH_QUERY:
+      return {
+        ...state,
+        searchQuery: ''
+      }
     default:
       return state
   }
 }
 
 const setBooks = (books: Array<BookType>): SetBooksType => ({type: SET_BOOKS, payload: books})
-export const setSearchQuery = (query: string) => ({type: SET_SEARCH_QUERY, payload: query})
+export const setSearchQuery = (query: string): SetSearchQueryType => ({type: SET_SEARCH_QUERY, payload: query})
+export const clearSearchQuery = (): ClearSearchQueryType => ({type: CLEAR_SEARCH_QUERY})
 type SetBooksType = {
   type: typeof SET_BOOKS
   payload: Array<BookType>
@@ -39,7 +46,10 @@ type SetSearchQueryType = {
   type: typeof SET_SEARCH_QUERY
   payload: string
 }
-type ActionTypes = SetBooksType | SetSearchQueryType
+type ClearSearchQueryType = {
+  type: typeof CLEAR_SEARCH_QUERY
+}
+type ActionTypes = SetBooksType | SetSearchQueryType | ClearSearchQueryType
 
 export const getBooks = (category: number | null, type: string, order: string, searchQuery: string): ThunkActionType => async dispatch => {
   const data = await booksAPI.getBooks(category, type, order, searchQuery)

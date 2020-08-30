@@ -14,8 +14,8 @@ const Categories = ({ categoryNames, activeCategory }: PropsType) => {
   let [allCategory, setAllCategory] = useState(true)
 
   const onAllCategoryClick = () => {
-    setAllCategory(true)
     onCategoryItemClick(null)
+    setAllCategory(true)
   }
   const onCategoryItemClick = (index: number | null) => {
     dispatch(setActiveCategory(index))
