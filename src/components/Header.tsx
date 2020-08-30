@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, withRouter, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 import { useSelector } from 'react-redux'
 import { AppStateType } from '../redux/store'
-import SearchForm from './searchForm'
+import SearchForm from './SearchForm'
 
 const Header = () => {
   const { totalCount, totalPrice } = useSelector((state: AppStateType) => {

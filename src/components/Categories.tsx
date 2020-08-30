@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import cn from 'classnames'
 import { useDispatch } from 'react-redux'
 import { setActiveCategory } from '../redux/reducers/category'
+import { clearSearchQuery, setCurrentPage } from '../redux/reducers/books'
 
 type PropsType = {
   categoryNames: Array<string>,
@@ -19,6 +20,8 @@ const Categories = ({ categoryNames, activeCategory }: PropsType) => {
   }
   const onCategoryItemClick = (index: number | null) => {
     dispatch(setActiveCategory(index))
+    dispatch(clearSearchQuery()) 
+    dispatch(setCurrentPage(1))
     setAllCategory(false)
   }
 

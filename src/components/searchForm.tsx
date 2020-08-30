@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik, FormikHelpers } from 'formik'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setSearchQuery } from '../redux/reducers/books'
 
 const searchFormValidate = (values: any) => {
@@ -16,9 +16,10 @@ const SearchForm = () => {
 
   const dispatch = useDispatch()
 
-  const submit = (values: ValuesType, { setSubmitting }: FormikHelpers<ValuesType>) => {
+  const submit = (values: ValuesType, { setSubmitting, resetForm }: FormikHelpers<ValuesType>) => {
     dispatch(setSearchQuery(values.query))
     setSubmitting(false)
+    resetForm()
   }
 
   return (

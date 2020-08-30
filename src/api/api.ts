@@ -6,9 +6,7 @@ const instance = axios.create({
 })
 
 export const booksAPI = {
-  getBooks: (category: number | null, type: string, order: string, searchQuery: string) => {
-    return instance.get<Array<BookType>>(`books?${category !== null ? `category=${category}` : ''}&_sort=${type}&_order=${order}&q=${searchQuery}`).then(response => {
-      return response.data
-    })
+  getBooks: (category: number | null, type: string, order: string, searchQuery: string, pageNumber: number) => {
+    return instance.get<Array<BookType>>(`books?${category !== null ? `category=${category}&` : ''}_sort=${type}&_order=${order}${searchQuery ? `&q=${searchQuery}` : ''}&_page=${pageNumber}`).then(response => response)
   }
 }
